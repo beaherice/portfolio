@@ -6,94 +6,95 @@
     <title>Beah Erice Rusit</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-800 overflow-x-hidden">
-    <video src="Untitled design.mp4" autoplay muted loop  class="h-full w-full fixed object-cover z-[-10]"></video>
-<header class="bg-pink-400 p-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo or brand name -->
-        <a href="#" class="text-white text-2xl font-bold">Beah Erice M. Rusit</a>
 
-        <!-- Hamburger Icon (Visible on mobile) -->
-        <div class="lg:hidden">
-            <button id="hamburger-icon" class="text-white focus:outline-none">
+<body class="bg-gray-100 text-gray-800 overflow-x-hidden">
+        <video src="Untitled design.mp4" autoplay muted loop  class="h-full w-full fixed object-cover z-[-10]"></video>
+    <header class="bg-pink-400 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo or brand name -->
+            <a href="#" class="text-white text-2xl font-bold">Beah Erice M. Rusit</a>
+
+            <!-- Hamburger Icon (Visible on mobile) -->
+            <div class="lg:hidden">
+                <button id="hamburger-icon" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Menu Links (Visible on larger screens) -->
+            <nav class="hidden lg:flex space-x-6 bg-pink-">
+                <a href="index.html" class="text-white hover:text-pink-900">Home</a>
+                <a href="techstack.html" class="text-white hover:text-pink-900">Tech Stack</a>
+                <a href="certificates.html" class="text-white hover:text-pink-900">Certificates</a>
+                <a href="contacts.html" class="text-white hover:text-pink-900">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Initially hidden) -->
+    <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50 hidden">
+        <div class="bg-white w-3/4 p-6 rounded-lg">
+            <nav>
+                <ul class="space-y-4 text-center">
+                    <li><a href="index.html" class="text-gray-800 hover:text-gray-600">Home</a></li>
+                    <li><a href="techstack.html" class="text-gray-800 hover:text-gray-600">Tech Stack</a></li>
+                    <li><a href="certificates.html" class="text-gray-800 hover:text-gray-600">Certificates</a></li>
+                    <li><a href="contacts.html" class="text-gray-800 hover:text-gray-600">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="close-menu" class="absolute top-4 right-4 text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
         </div>
-
-        <!-- Menu Links (Visible on larger screens) -->
-        <nav class="hidden lg:flex space-x-6 bg-pink-">
-            <a href="#" class="text-white hover:text-pink-900">Home</a>
-            <a href="#about" class="text-white hover:text-pink-900">About</a>
-            <a href="#services" class="text-white hover:text-pink-900">Services</a>
-            <a href="#contact" class="text-white hover:text-pink-900">Contact</a>
-        </nav>
     </div>
-</header>
 
-<!-- Mobile Menu (Initially hidden) -->
-<div id="mobile-menu" class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50 hidden">
-    <div class="bg-white w-3/4 p-6 rounded-lg">
-        <nav>
-            <ul class="space-y-4 text-center">
-                <li><a href="#" class="text-gray-800 hover:text-gray-600">Home</a></li>
-                <li><a href="#about" class="text-gray-800 hover:text-gray-600">About</a></li>
-                <li><a href="#services" class="text-gray-800 hover:text-gray-600">Services</a></li>
-                <li><a href="#contact" class="text-gray-800 hover:text-gray-600">Contact</a></li>
-            </ul>
-        </nav>
-        <button id="close-menu" class="absolute top-4 right-4 text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-        </button>
-    </div>
-</div>
+        <section id="Home" class="py-16 min-h-[100vh] flex items-center justify-center">
+            <div class="container mx-auto flex items-center space-x-8 flex-col lg:flex-row">
+                <div class="flex-1 text-center">
+                    <h2 class="text-3xl font-semibold mb-2">About Me</h2>
+                    <p class="text-lg mx-5 mb-5">
+                        Hi, I'm Beah Erice M. Rusit, a student currently pursuing a Bachelor of Science in Information Technology at St. Dominic College of Asia. I have a strong passion for technology and am eager to learn more about coding. As I continue my studies, I look forward to expanding my knowledge and skills in the tech field, with the goal of contributing to innovative projects and growing as a developer.
+                    </p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <img src="beah.jpg" alt="Your Logo" class="max-w-full h-auto max-h-80 rounded-full border-4 border-pink-400" />
+                </div>            
+            </div>
+        </section>
+        
 
-    <section id="about" class="py-16 min-h-[100vh] flex items-center justify-center">
-        <div class="container mx-auto flex items-center space-x-8 flex-col lg:flex-row">
-            <div class="flex-1 text-center">
-                <h2 class="text-3xl font-semibold mb-2">About Me</h2>
-                <p class="text-lg mx-5 mb-5">
-                    Hi, I'm Beah Erice M. Rusit, a student currently pursuing a Bachelor of Science in Information Technology at St. Dominic College of Asia. I have a strong passion for technology and am eager to learn more about coding. As I continue my studies, I look forward to expanding my knowledge and skills in the tech field, with the goal of contributing to innovative projects and growing as a developer.
+        <section id="techstack" class="py-16 min-h-[100vh] flex items-center justify-center">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-semibold mb-8">Techstack</h2>
+                <div class="flex flex-wrap justify-center space-x-6 mx-5">
+                    <img src="c-programming-language-seeklogo.png" alt="c" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
+                    <img src="css-3-seeklogo.png" alt="css" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
+                    <img src="html5-without-wordmark-color-seeklogo.png" alt="html" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
+                    <img src="java-seeklogo.png" alt="java" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
+                    <img src="javascript-seeklogo.png" alt="javascript" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <section id="Contact" class="py-16 min-h-[100vh] flex items-center justify-center">
+            <div class="container mx-auto text-center flex flex-col items-center">
+                <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+                <p class="text-lg mx-5">
+                    If you'd like to get in touch, feel free to email me at beaherice.rusit@sdca.edu.ph
                 </p>
+                <a href="https://github.com/beaherice">
+                    <img src="github_logo.png" alt="" class="w-24 h-24 mt-10">
+                </a>
+                
             </div>
-            <div class="flex-1 flex justify-center">
-                <img src="beah.jpg" alt="Your Logo" class="max-w-full h-auto max-h-80 rounded-full border-4 border-pink-400" />
-            </div>            
-        </div>
-    </section>
-    
+        </section>
 
-    <section id="techstack" class="py-16 min-h-[100vh] flex items-center justify-center">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-semibold mb-8">Techstack</h2>
-            <div class="flex flex-wrap justify-center space-x-6 mx-5">
-                <img src="c-programming-language-seeklogo.png" alt="c" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
-                <img src="css-3-seeklogo.png" alt="css" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
-                <img src="html5-without-wordmark-color-seeklogo.png" alt="html" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
-                <img src="java-seeklogo.png" alt="java" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
-                <img src="javascript-seeklogo.png" alt="javascript" class="w-24 h-24 mb-6 sm:w-20 sm:h-20 md:w-24 md:h-24">
-            </div>
-        </div>
-    </section>
     
-    
-
-    <section id="contact" class="py-16 min-h-[100vh] flex items-center justify-center">
-        <div class="container mx-auto text-center flex flex-col items-center">
-            <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-            <p class="text-lg mx-5">
-                If you'd like to get in touch, feel free to email me at beaherice.rusit@sdca.edu.ph
-            </p>
-            <a href="https://github.com/beaherice">
-                <img src="github_logo.png" alt="" class="w-24 h-24 mt-10">
-            </a>
-            
-        </div>
-    </section>
-
-   
 </body>
 </html>
