@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beah Erice Rusit</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-800 overflow-x-hidden">
             <video src="Untitled design.mp4" autoplay muted loop  class="h-full w-full fixed object-cover z-[-10]"></video>
@@ -15,8 +17,8 @@
 
                 <!-- Hamburger Icon (Visible on mobile) -->
                 <div class="lg:hidden">
-                    <button id="hamburger-icon" class="text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <button id="hamburger-icon" class="text-white focus:outline-none hover:text-pink-300 transition duration-300">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -25,6 +27,7 @@
                 <!-- Menu Links (Visible on larger screens) -->
                 <nav class="hidden lg:flex space-x-6 bg-pink-">
                     <a href="index.html" class="text-white hover:text-pink-900">Home</a>
+                    <a href="aboutme.html" class="text-white hover:text-pink-900">About</a>
                     <a href="techstack.html" class="text-white hover:text-pink-900">Tech Stack</a>
                     <a href="certificates.html" class="text-white hover:text-pink-900">Certificates</a>
                     <a href="contacts.html" class="text-white hover:text-pink-900">Contact</a>
@@ -38,13 +41,14 @@
                 <nav>
                     <ul class="space-y-4 text-center">
                         <li><a href="index.html" class="text-gray-800 hover:text-gray-600">Home</a></li>
+                        <li><a href="aboutme.html" class="text-gray-800 hover:text-gray-600">About</a></li>
                         <li><a href="techstack.html" class="text-gray-800 hover:text-gray-600">Tech Stack</a></li>
                         <li><a href="certificates.html" class="text-gray-800 hover:text-gray-600">Certificates</a></li>
                         <li><a href="contacts.html" class="text-gray-800 hover:text-gray-600">Contact</a></li>
                     </ul>
                 </nav>
-                <button id="close-menu" class="absolute top-4 right-4 text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <button id="close-menu" class="absolute top-4 right-4 text-gray-800 hover:text-gray-600 transition duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
@@ -55,7 +59,7 @@
             <div class="container mx-auto text-center flex flex-col items-center">
                 <h2 class="text-3xl font-semibold mb-4">Contact</h2>
                 <p class="text-lg mx-5">
-                    If you'd like to get in touch, feel free to email me at beaherice.rusit@sdca.edu.ph
+                    Feel free to reach out!
                 </p>
                 <a href="https://github.com/beaherice">
                     <img src="github_logo.png" alt="" class="w-24 h-24 mt-10">
@@ -63,5 +67,6 @@
                 
             </div>
         </section>
+        <script src="script.js"></script>
     </body>
 </html>
