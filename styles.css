@@ -140,4 +140,28 @@ body {
         width: 200px;
         height: 200px;
     }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 90vh;
+    }
+
+    .show {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
 }
