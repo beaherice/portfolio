@@ -3,13 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMenu = document.getElementById('close-menu');
 
-    if (hamburgerIcon && mobileMenu && closeMenu) {
-        hamburgerIcon.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
+    // Toggle mobile menu
+    function toggleMenu() {
+        mobileMenu.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden');
     }
+
+    // Event listeners
+    hamburgerIcon.addEventListener('click', toggleMenu);
+    closeMenu.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            toggleMenu();
+        }
+    });
+
+    // Close menu when clicking on menu items
+    const menuItems = mobileMenu.querySelectorAll('a');
+    menuItems.forEach(item => {
+        item.addEventListener('click', toggleMenu);
+    });
 });

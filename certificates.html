@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beah Erice Rusit</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90vh;
+        }
+
+        .show {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-800 overflow-x-hidden">
             <video src="Untitled design.mp4" autoplay muted loop  class="h-full w-full fixed object-cover z-[-10]"></video>
@@ -26,11 +49,11 @@
 
                 <!-- Menu Links (Visible on larger screens) -->
                 <nav class="hidden lg:flex space-x-6 bg-pink-">
-                    <a href="index.html" class="text-white hover:text-pink-900">Home</a>
-                    <a href="aboutme.html" class="text-white hover:text-pink-900">About</a>
-                    <a href="techstack.html" class="text-white hover:text-pink-900">Tech Stack</a>
-                    <a href="certificates.html" class="text-white hover:text-pink-900">Certificates</a>
-                    <a href="contacts.html" class="text-white hover:text-pink-900">Contact</a>
+                    <li><a href="index.html" class="text-gray-800 hover:text-gray-600">Home</a></li>
+                    <li><a href="aboutme.html" class="text-gray-800 hover:text-gray-600">About</a></li>
+                    <li><a href="tech-stack.html" class="text-gray-800 hover:text-gray-600">Tech Stack</a></li>
+                    <li><a href="certificates.html" class="text-gray-800 hover:text-gray-600">Certificates</a></li>
+                    <li><a href="contacts.html" class="text-gray-800 hover:text-gray-600">Contact</a></li>
                 </nav>
             </div>
         </header>
@@ -42,7 +65,7 @@
                     <ul class="space-y-4 text-center">
                         <li><a href="index.html" class="text-gray-800 hover:text-gray-600">Home</a></li>
                         <li><a href="aboutme.html" class="text-gray-800 hover:text-gray-600">About</a></li>
-                        <li><a href="techstack.html" class="text-gray-800 hover:text-gray-600">Tech Stack</a></li>
+                        <li><a href="tech-stack.html" class="text-gray-800 hover:text-gray-600">Tech Stack</a></li>
                         <li><a href="certificates.html" class="text-gray-800 hover:text-gray-600">Certificates</a></li>
                         <li><a href="contacts.html" class="text-gray-800 hover:text-gray-600">Contact</a></li>
                     </ul>
@@ -57,17 +80,52 @@
 
         <section id="certificates" class="py-16 min-h-[100vh] flex items-center justify-center">
             <div class="container mx-auto text-center px-4">
-                <h2 class="text-3xl font-semibold mb-8"font-bold">Certificates</h2>
+                <h2 class="text-3xl font-semibold mb-8">Certificates</h2>
                 <div class="flex flex-wrap justify-center gap-8 mx-10">
                     <div>
-                        <img src="wordCertificate.jpg" class="certificate-img max-w-full h-auto max-h-80 border-4 border-white hover:scale-110  transition-transform duration-300 cursor-pointer">
-                    </div
+                        <img src="wordCertificate.jpg" class="certificate-img max-w-full h-auto max-h-80 border-4 border-white hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    </div>
                     <div>
-                        <img src="pptCertificate.jpg"  class="certificate-img max-w-full h-auto max-h-80 border-4 border-white hover:scale-110  transition-transform duration-300 cursor-pointer">
+                        <img src="pptCertificate.jpg"  class="certificate-img max-w-full h-auto max-h-80 border-4 border-white hover:scale-105 transition-transform duration-300 cursor-pointer">
                     </div>
                 </div>
             </div>
         </section>
-        <script src="script.js"></script>
+
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <img class="modal-content" id="modalImg">
+        </div>
+
+        <script>
+            // Mobile menu functionality
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const closeMenu = document.getElementById('close-menu');
+
+            hamburgerIcon.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+
+            // Certificate modal functionality
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            const certImages = document.querySelectorAll('.certificate-img');
+
+            certImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    modal.classList.add('show');
+                    modalImg.src = this.src;
+                });
+            });
+
+            modal.addEventListener('click', function() {
+                modal.classList.remove('show');
+            });
+        </script>
     </body>
 </html>
