@@ -7,9 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Vanta.js and Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 overflow-x-hidden">
-    <video src="Untitled design.mp4" autoplay muted loop class="h-full w-full fixed object-cover z-[-10]"></video>
+
     <header class="bg-pink-400 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-white text-2xl font-bold">Beah Erice Rusit</a>
@@ -35,7 +39,7 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50 hidden">
-        <div class="bg-white w-3/4 p-6 rounded-lg">
+        <div class="bg-white w-3/4 p-6 rounded-lg relative">
             <nav>
                 <ul class="space-y-4 text-center">
                     <li><a href="index.html" class="text-gray-800 hover:text-gray-600">Home</a></li>
@@ -53,32 +57,51 @@
         </div>
     </div>
 
-    <!-- Main Content -->
-    <section class="py-16 min-h-[100vh] flex items-center justify-center">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-8 text-center">
-                <h1 class="text-3xl font-bold text-gray-800 mb-6">About Me</h1>
-                <img src="beah.jpg" alt="Profile Photo" class="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-pink-400">
-                <div class="space-y-4">
-                    <p class="text-gray-700">
-                        Hi, I'm Beah Erice M. Rusit, a passionate Information Technology student at St. Dominic College of Asia. My journey in technology is driven by a deep curiosity and eagerness to learn and create.
-                    </p>
-                    <p class="text-gray-700">
-                        Currently pursuing my Bachelor's degree, I'm focusing on developing my skills in web development and programming. I believe in the power of technology to create meaningful solutions and positive change.
-                    </p>
-                    <div class="mt-8">
-                        <h2 class="text-xl font-semibold text-gray-800 mb-3">Education</h2>
+    <!-- Vanta Background Wrapper -->
+    <div id="vanta-bg" class="min-h-[100vh]">
+        <!-- Main Content -->
+        <section class="py-16 min-h-[100vh] flex items-center justify-center">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-8 text-center">
+                    <h1 class="text-3xl font-bold text-gray-800 mb-6">About Me</h1>
+                    <img src="beah.jpg" alt="Profile Photo" class="w-48 h-48 rounded-full mx-auto mb-6 border-4 border-pink-400">
+                    <div class="space-y-4">
                         <p class="text-gray-700">
-                            Bachelor of Science in Information Technology<br>
-                            St. Dominic College of Asia<br>
-                            2022 - Present
+                            Hi, I'm Beah Erice M. Rusit, a passionate Information Technology student at St. Dominic College of Asia. My journey in technology is driven by a deep curiosity and eagerness to learn and create.
                         </p>
+                        <p class="text-gray-700">
+                            Currently pursuing my Bachelor's degree, I'm focusing on developing my skills in web development and programming. I believe in the power of technology to create meaningful solutions and positive change.
+                        </p>
+                        <div class="mt-8">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-3">Education</h2>
+                            <p class="text-gray-700">
+                                Bachelor of Science in Information Technology<br>
+                                St. Dominic College of Asia<br>
+                                2022 - Present
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
+    <!-- Initialize Vanta background -->
+    <script>
+      VANTA.FOG({
+        el: "#vanta-bg",  // Correct element selector for Vanta.js
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        highlightColor: 0xffadff,
+        midtoneColor: 0xff96f2,
+        lowlightColor: 0xffffff,
+        baseColor: 0xffffff,
+        speed: 3.40
+      });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
