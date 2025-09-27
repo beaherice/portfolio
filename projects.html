@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projects - Beah Erice Rusit</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 overflow-x-hidden">
+<header class="bg-pink-400 p-4">
+	<div class="container mx-auto flex justify-between items-center">
+		<a href="index.html" class="text-white text-2xl font-bold">Beah Erice Rusit</a>
+		<div class="lg:hidden">
+			<button id="hamburger-icon" class="text-white focus:outline-none hover:text-pink-300 transition duration-300">
+				<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+				</svg>
+			</button>
+		</div>
+
+		<nav class="hidden lg:flex space-x-6">
+			<a href="index.html" class="text-white hover:text-pink-900">Home</a>
+            <a href="about-me.html" class="text-white hover:text-pink-900">About</a>
+            <a href="tech-stack.html" class="text-white hover:text-pink-900">Tech Stack</a>
+            <a href="projects.html" class="text-white hover:text-pink-900">Projects</a>
+            <a href="certificates.html" class="text-white hover:text-pink-900">Certificates</a>
+            <a href="contacts.html" class="text-white hover:text-pink-900">Contact</a>
+		</nav>
+	</div>
+</header>
+
+<div id="mobile-menu" class="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center z-50 hidden">
+	<div class="bg-white w-3/4 p-6 rounded-lg">
+		<nav>
+			<ul class="space-y-4 text-center">
+				<li><a href="index.html" class="text-gray-800 hover:text-gray-600">Home</a></li>
+				<li><a href="about-me.html" class="text-gray-800 hover:text-gray-600">About</a></li>
+				<li><a href="tech-stack.html" class="text-gray-800 hover:text-gray-600">Tech Stack</a></li>
+				<li><a href="projects.html" class="text-gray-800 hover:text-gray-600">Projects</a></li>
+				<li><a href="certificates.html" class="text-gray-800 hover:text-gray-600">Certificates</a></li>
+				<li><a href="contacts.html" class="text-gray-800 hover:text-gray-600">Contact</a></li>
+			</ul>
+		</nav>
+		<button id="close-menu" class="absolute top-4 right-4 text-gray-800 hover:text-gray-600 transition duration-300">
+			<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</button>
+	</div>
+</div>
+
+<div id="vanta-bg" class="min-h-[100vh] flex items-start justify-center py-24">
+	<section id="projects" class="w-full">
+		<div class="container mx-auto px-6 max-w-4xl">
+			<h2 class="text-3xl font-semibold text-center mb-6">Projects</h2>
+
+			<!-- Centered single project card (smaller) -->
+			<div class="flex justify-center py-6">
+				<div tabindex="0" class="bg-white rounded-lg shadow-lg overflow-hidden inline-block max-w-sm transform transition-transform duration-200 hover:scale-105 focus:scale-105 card-focus">
+					<div class="bg-gray-100 w-full h-48 flex items-center justify-center">
+						<img src="revu_project.png" alt="Revu Project" class="w-full h-full object-contain">
+					</div>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold mb-2">Revu — Gamified Flashcards App</h3>
+						<p class="text-gray-700 mb-3 text-sm">A gamified flashcards application I built to make studying more engaging. It includes spaced repetition, simple game mechanics to reward progress, and lightweight progress tracking to motivate learners.</p>
+						<p class="text-sm text-gray-600">Role: UI/UX Designer</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<script>
+  VANTA.FOG({
+	el: "#vanta-bg",
+	mouseControls: true,
+	touchControls: true,
+	gyroControls: false,
+	minHeight: 200.00,
+	minWidth: 200.00,
+	highlightColor: 0xffadff,
+	midtoneColor: 0xff96f2,
+	lowlightColor: 0xffffff,
+	baseColor: 0xffffff,
+	speed: 3.40
+  });
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

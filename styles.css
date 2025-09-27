@@ -102,6 +102,20 @@ body {
     margin-left: 1rem;
 }
 
+/* Tech stack icons: ensure consistent sizing and preserve aspect ratio */
+.tech-icon {
+    width: 6rem; /* 24 */
+    height: 6rem; /* 24 */
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Ensure project images and tech icons behave consistently */
+.card-image, .tech-icon img, img.tech-icon {
+    object-fit: contain;
+}
+
 @media (max-width: 768px) {
     .toggle-button {
         display: flex;
@@ -164,4 +178,19 @@ body {
         justify-content: center;
         align-items: center;
     }
+}
+
+/* Active navigation link */
+.nav-active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    font-weight: 600;
+    color: #ffe6f3; /* slightly lighter/pinkish to stand out */
+}
+
+/* Accessible focus for interactive cards */
+.card-focus:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255,105,180,0.12);
+    transform: translateZ(0);
 }

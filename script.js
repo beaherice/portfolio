@@ -25,4 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
     menuItems.forEach(item => {
         item.addEventListener('click', toggleMenu);
     });
+
+    // Highlight active nav links (desktop and mobile)
+    const setActiveNav = () => {
+        const path = window.location.pathname.split('/').pop() || 'index.html';
+        // desktop nav links
+        document.querySelectorAll('nav a').forEach(a => {
+            const href = a.getAttribute('href');
+            if (href === path) {
+                a.classList.add('nav-active');
+            } else {
+                a.classList.remove('nav-active');
+            }
+        });
+        // mobile menu links
+        document.querySelectorAll('#mobile-menu a').forEach(a => {
+            const href = a.getAttribute('href');
+            if (href === path) {
+                a.classList.add('nav-active');
+            } else {
+                a.classList.remove('nav-active');
+            }
+        });
+    };
+
+    setActiveNav();
 });
